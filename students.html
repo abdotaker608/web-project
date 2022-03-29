@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .students-table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+
+        .students-table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .students-table thead{
+            background: rgb(132, 132, 221);
+            color: white;
+        }
+
+        .students-table th,td{
+            padding: 10px 20px;
+        }
+
+        .students-table td{
+            color: rgb(54, 53, 53);
+        }
+
+        .students-table tr:nth-child(even){
+            background: rgb(240, 238, 238);
+        }
+
+        @media screen and (max-width: 768px) {
+            .students-table {
+                justify-content: stretch;
+                text-align: start;
+            }
+
+            .students-table tbody tr {
+                display: flex;
+                flex-direction: column;
+                background: unset !important;
+                border-bottom: 1px solid rgb(240, 238, 238);
+                padding: 10px 0;
+            }
+
+            .students-table thead {
+                display: none;
+            }
+
+            .students-table td:nth-child(1)::before {
+                content: "ID:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+
+            .students-table td:nth-child(2)::before {
+                content: "Name:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+            
+            .students-table td:nth-child(3)::before {
+                content: "Birth Date:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+
+            .students-table td:nth-child(4)::before {
+                content: "GPA:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+
+            .students-table td:nth-child(5)::before {
+                content: "Gender:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+
+            .students-table td:nth-child(6)::before {
+                content: "Level:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+
+            .students-table td:nth-child(7)::before {
+                content: "Status:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+
+            .students-table td:nth-child(8)::before {
+                content: "Department:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+
+            .students-table td:nth-child(9)::before {
+                content: "Email:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+
+            .students-table td:nth-child(10)::before {
+                content: "Mobile No.:";
+                display: inline-block;
+                width: 120px;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="students-table-container">
+        <table class="students-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Birth Date</th>
+                    <th>GPA</th>
+                    <th>Gender</th>
+                    <th>Level</th>
+                    <th>Status</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                    <th>Mobile No.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2020XXXX</td>
+                    <td>Name</td>
+                    <td>DD/MM/YYYY</td>
+                    <td>4.0</td>
+                    <td>Male</td>
+                    <td>3</td>
+                    <td>Active</td>
+                    <td>AI</td>
+                    <td>example@email.com</td>
+                    <td>0123456789</td>
+                </tr>
+                <tr>
+                    <td>2020XXXX</td>
+                    <td>Name</td>
+                    <td>DD/MM/YYYY</td>
+                    <td>4.0</td>
+                    <td>Male</td>
+                    <td>3</td>
+                    <td>Active</td>
+                    <td>CS</td>
+                    <td>example@email.com</td>
+                    <td>0123456789</td>
+                </tr>
+                <tr>
+                    <td>2020XXXX</td>
+                    <td>Name</td>
+                    <td>DD/MM/YYYY</td>
+                    <td>4.0</td>
+                    <td>Male</td>
+                    <td>2</td>
+                    <td>Active</td>
+                    <td>-</td>
+                    <td>example@email.com</td>
+                    <td>0123456789</td>
+                </tr>
+                <tr>
+                    <td>2020XXXX</td>
+                    <td>Name</td>
+                    <td>DD/MM/YYYY</td>
+                    <td>4.0</td>
+                    <td>Male</td>
+                    <td>1</td>
+                    <td>In Active</td>
+                    <td>-</td>
+                    <td>example@email.com</td>
+                    <td>0123456789</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
