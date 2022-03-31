@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+
+        <style>
+            body{
+                background-color: gray;
+                margin: 0px;
+            }
+
+            .container{
+                background-color: black;
+                display: flex;
+                width: 100%;
+                height: 50px;
+                justify-content:left;
+            }
+
+            .box{
+                margin: 6px;
+            }
+
+
+            .nativ{
+                padding: 20px;
+                color: aliceblue;
+                text-decoration: none;
+            }
+
+            .nativ:hover{
+                background-color: aliceblue;
+                color: black;
+            }
+
+            .nativ:active{
+                background-color: gray;
+                color: black;
+            }
+
+            .center{
+                position: relative;
+                background-color: bisque;
+                left: 25%;
+                width: 50%;
+            }
+        </style>
+    </head>
+    
+    <body>
+    <div class="container">
+        <img src="Logo.jpg" alt="Logo" style="width: 50px;height: 50px;">
+        <div class="box"><a href="Home Page.html" class="nativ">Home</a></div>
+        <div class="box"><a href="students.html" class="nativ">Students</a></div>
+        <div class="box"><a href="add new student.html" class="nativ">Reguster</a></div>
+        <div class="box"><a href="update.html" class="nativ">Update</a></div>
+    </div>
+
+    <img src="Logo.jpg" alt="Logo">
+    <div class="center">
+        <h1>Welcome To The Students</h1>
+    </div>
+
+    <div class="center">
+        <h1>Student Table</h1>
+        <p>If you want to show students table visit this link</p>
+        <a href="students.html">Student Table</a>
+    </div>
+
+    <div class="center">
+        <h1>Reguster Courses</h1>
+        <p>If you want to regust the courses visit this link</p>
+        <a href="add new student.html">Reguster</a>
+    </div>
+
+    <div class="center">
+        <h1>Update your information</h1>
+        <p>If you want to update your information visit this link</p>
+        <a href="update.html">Update</a>
+    </div>
+    </body>
+
+</html>
+
