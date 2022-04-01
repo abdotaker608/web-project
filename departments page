@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Departement selection</title>
+    </head>
+    <body>
+     
+        <h1>Choose your department now!</h1>
+        <p>If you're a year 3 student, you can choose one of the available departments according to your preferences.</p>
+        <p>Name:<br/> ID:<br/></p>
+        <form method="post">
+            Departments<select name="Department">
+                <option>------</option>
+                <option>Artificial intelligence</option>
+                <option>Information technology</option>
+                <option>Information systems</option>
+                <option>Computer science</option>
+                <input type="submit">
+            </select>
+        </form>
+        
+    </body>
+</html>
