@@ -5,15 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students</title>
+    <link rel="stylesheet" href="./styles/default.css" />
+    <link rel="shortcut icon" href="./assets/logo.jpg" />
     <style>
-        body {
-            margin: 0;
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .nav-bar {
+            padding: 12px 0 56px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .navs{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav{
+            color: var(--dark);
+            text-decoration: none;
+            transition: 250ms ease-out;
+            font-weight: 500;
+        }
+
+        .nav:hover, .nav-active{
+            color: var(--primary);
         }
 
         .students-table {
             border-collapse: collapse;
             width: 100%;
             text-align: center;
+            opacity: 0;
+            animation: appear 500ms ease-out forwards;
         }
 
         .students-table-container {
@@ -22,7 +56,7 @@
         }
 
         .students-table thead{
-            background: rgb(132, 132, 221);
+            background: var(--primary);
             color: white;
         }
 
@@ -35,7 +69,15 @@
         }
 
         .students-table tr:nth-child(even){
-            background: rgb(240, 238, 238);
+            background: var(--light-gray);
+        }
+
+        @media screen and (min-width: 768px) {
+            .nav-bar {
+                flex-direction: row;
+                gap: 32px;
+                padding: 24px var(--padding-inline-lg) 56px var(--padding-inline-lg);
+            }
         }
 
         @media screen and (max-width: 768px) {
@@ -56,71 +98,8 @@
                 display: none;
             }
 
-            .students-table td:nth-child(1)::before {
-                content: "ID:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-
-            .students-table td:nth-child(2)::before {
-                content: "Name:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-            
-            .students-table td:nth-child(3)::before {
-                content: "Birth Date:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-
-            .students-table td:nth-child(4)::before {
-                content: "GPA:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-
-            .students-table td:nth-child(5)::before {
-                content: "Gender:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-
-            .students-table td:nth-child(6)::before {
-                content: "Level:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-
-            .students-table td:nth-child(7)::before {
-                content: "Status:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-
-            .students-table td:nth-child(8)::before {
-                content: "Department:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-
-            .students-table td:nth-child(9)::before {
-                content: "Email:";
-                display: inline-block;
-                width: 120px;
-                font-weight: bold;
-            }
-
-            .students-table td:nth-child(10)::before {
-                content: "Mobile No.:";
+            .students-table td::before {
+                content: attr(data-label) ':';
                 display: inline-block;
                 width: 120px;
                 font-weight: bold;
@@ -129,6 +108,16 @@
     </style>
 </head>
 <body>
+    <div class="nav-bar">
+        <img src="./assets/logo.jpg" alt="Logo" style="height: 80px;">
+        <div class="navs">
+            <div class="box"><a href="./index.html" class="nav">Home</a></div>
+            <div class="box"><a href="./students.html" class="nav nav-active">Students</a></div>
+            <div class="box"><a href="./new_student.html" class="nav">Register</a></div>
+            <div class="box"><a href="./update_student.html" class="nav">Update</a></div>
+            <div class="box"><a href="./deparment.html" class="nav">Departement</a></div>
+        </div>
+    </div>
     <div class="students-table-container">
         <table class="students-table">
             <thead>
@@ -147,52 +136,88 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>2020XXXX</td>
-                    <td>Name</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>4.0</td>
-                    <td>Male</td>
-                    <td>3</td>
-                    <td>Active</td>
-                    <td>AI</td>
-                    <td>example@email.com</td>
-                    <td>0123456789</td>
+                    <td data-label="ID">2020XXXX</td>
+                    <td data-label="Name">Name</td>
+                    <td data-label="Birth Date">DD/MM/YYYY</td>
+                    <td data-label="GPA">4.0</td>
+                    <td data-label="Gender">Male</td>
+                    <td data-label="Level">3</td>
+                    <td data-label="Status">Active</td>
+                    <td data-label="Department">AI</td>
+                    <td data-label="Email">example@email.com</td>
+                    <td data-label="Mobile No.">0123456789</td>
                 </tr>
                 <tr>
-                    <td>2020XXXX</td>
-                    <td>Name</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>4.0</td>
-                    <td>Male</td>
-                    <td>3</td>
-                    <td>Active</td>
-                    <td>CS</td>
-                    <td>example@email.com</td>
-                    <td>0123456789</td>
+                    <td data-label="ID">2020XXXX</td>
+                    <td data-label="Name">Name</td>
+                    <td data-label="Birth Date">DD/MM/YYYY</td>
+                    <td data-label="GPA">4.0</td>
+                    <td data-label="Gender">Male</td>
+                    <td data-label="Level">3</td>
+                    <td data-label="Status">Active</td>
+                    <td data-label="Department">AI</td>
+                    <td data-label="Email">example@email.com</td>
+                    <td data-label="Mobile No.">0123456789</td>
                 </tr>
                 <tr>
-                    <td>2020XXXX</td>
-                    <td>Name</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>4.0</td>
-                    <td>Male</td>
-                    <td>2</td>
-                    <td>Active</td>
-                    <td>-</td>
-                    <td>example@email.com</td>
-                    <td>0123456789</td>
+                    <td data-label="ID">2020XXXX</td>
+                    <td data-label="Name">Name</td>
+                    <td data-label="Birth Date">DD/MM/YYYY</td>
+                    <td data-label="GPA">4.0</td>
+                    <td data-label="Gender">Male</td>
+                    <td data-label="Level">3</td>
+                    <td data-label="Status">Active</td>
+                    <td data-label="Department">AI</td>
+                    <td data-label="Email">example@email.com</td>
+                    <td data-label="Mobile No.">0123456789</td>
                 </tr>
                 <tr>
-                    <td>2020XXXX</td>
-                    <td>Name</td>
-                    <td>DD/MM/YYYY</td>
-                    <td>4.0</td>
-                    <td>Male</td>
-                    <td>1</td>
-                    <td>In Active</td>
-                    <td>-</td>
-                    <td>example@email.com</td>
-                    <td>0123456789</td>
+                    <td data-label="ID">2020XXXX</td>
+                    <td data-label="Name">Name</td>
+                    <td data-label="Birth Date">DD/MM/YYYY</td>
+                    <td data-label="GPA">4.0</td>
+                    <td data-label="Gender">Male</td>
+                    <td data-label="Level">3</td>
+                    <td data-label="Status">Active</td>
+                    <td data-label="Department">AI</td>
+                    <td data-label="Email">example@email.com</td>
+                    <td data-label="Mobile No.">0123456789</td>
+                </tr>
+                <tr>
+                    <td data-label="ID">2020XXXX</td>
+                    <td data-label="Name">Name</td>
+                    <td data-label="Birth Date">DD/MM/YYYY</td>
+                    <td data-label="GPA">4.0</td>
+                    <td data-label="Gender">Male</td>
+                    <td data-label="Level">3</td>
+                    <td data-label="Status">Active</td>
+                    <td data-label="Department">AI</td>
+                    <td data-label="Email">example@email.com</td>
+                    <td data-label="Mobile No.">0123456789</td>
+                </tr>
+                <tr>
+                    <td data-label="ID">2020XXXX</td>
+                    <td data-label="Name">Name</td>
+                    <td data-label="Birth Date">DD/MM/YYYY</td>
+                    <td data-label="GPA">4.0</td>
+                    <td data-label="Gender">Male</td>
+                    <td data-label="Level">3</td>
+                    <td data-label="Status">Active</td>
+                    <td data-label="Department">AI</td>
+                    <td data-label="Email">example@email.com</td>
+                    <td data-label="Mobile No.">0123456789</td>
+                </tr>
+                <tr>
+                    <td data-label="ID">2020XXXX</td>
+                    <td data-label="Name">Name</td>
+                    <td data-label="Birth Date">DD/MM/YYYY</td>
+                    <td data-label="GPA">4.0</td>
+                    <td data-label="Gender">Male</td>
+                    <td data-label="Level">3</td>
+                    <td data-label="Status">Active</td>
+                    <td data-label="Department">AI</td>
+                    <td data-label="Email">example@email.com</td>
+                    <td data-label="Mobile No.">0123456789</td>
                 </tr>
             </tbody>
         </table>
