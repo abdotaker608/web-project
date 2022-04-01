@@ -9,6 +9,17 @@
     <link rel="shortcut icon" href="./assets/logo.jpg" />
     <title>Register</title>
     <style>
+        @keyframes slide-up {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         .nav-bar {
             padding: 12px 0 56px 0;
             display: flex;
@@ -40,7 +51,7 @@
         }
 
         .form-container {
-            padding: 0 var(--padding-inline);
+            padding: 5px var(--padding-inline);
         }
 
         form{
@@ -50,6 +61,8 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 16px;
+            opacity: 0;
+            animation: slide-up 700ms ease-out forwards;
         }
 
         input {
@@ -110,15 +123,16 @@
             }
 
             .form-container {
-                padding: 0 var(--padding-inline-lg);
+                padding: 5px var(--padding-inline-lg);
             }
 
             form {
-                width: 600px;
+                width: 700px;
                 margin: 0 auto;
                 border-radius: 5px;
                 padding: 32px;
                 box-shadow: 0 0 5px silver;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             form button {
@@ -247,7 +261,7 @@
                 </div>
             </div>
     
-            <div style="text-align: center">
+            <div style="text-align: center; grid-column-end: span 2;">
                 <button type="submit">Add</button>
             </div>
         </form>

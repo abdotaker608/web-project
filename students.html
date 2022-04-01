@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="./styles/default.css" />
     <link rel="shortcut icon" href="./assets/logo.jpg" />
     <style>
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
         .nav-bar {
             padding: 12px 0 56px 0;
             display: flex;
@@ -37,6 +46,8 @@
             border-collapse: collapse;
             width: 100%;
             text-align: center;
+            opacity: 0;
+            animation: appear 500ms ease-out forwards;
         }
 
         .students-table-container {
