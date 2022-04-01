@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Encode+Sans&family=Lora&family=Montserrat:wght@300&display=swap');
+
+:root {
+    /* colors */
+    --primary: rgb(132, 132, 221);
+    --light-primary: rgb(149, 149, 233);
+    --dark: rgb(37, 37, 37);
+    --light-gray: rgb(241, 238, 238);
+
+    /*spacing*/
+    --padding-inline: 24px;
+    --padding-inline-lg: 56px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    color: var(--dark);
+    padding-bottom: 32px;
+}
