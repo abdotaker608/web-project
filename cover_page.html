@@ -30,15 +30,16 @@
 
         .students-table {
             border-collapse: collapse;
-            width: 100%;
             text-align: center;
             opacity: 0;
             animation: appear 500ms ease-out forwards;
+            width: 100%;
         }
 
         .students-table-container {
             width: 100%;
             overflow-x: auto;
+            margin-top: 48px;
         }
 
         .students-table thead{
@@ -96,6 +97,10 @@
         }
 
         @media screen and (max-width: 768px) {
+            .students-table-container {
+                overflow-x: hidden;
+            }
+
             .students-table {
                 justify-content: stretch;
                 text-align: start;
@@ -139,10 +144,10 @@
     <body>
         <header>
             <img src="./assets/logo.jpg" alt="Logo" class='logo'/>
-           <div>
+            <div>
                <h1>Section S15,S16</h1>
                <h1>Project 2 (Student Affairs website)</h1>
-        </div> 
+            </div>
         </header>
         <div class="students-table-container">
             <table class="students-table">
@@ -154,15 +159,15 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="Name">Mazen Ahmed Mahmoud Anwer</td>
+                        <td data-label="Name">Mazen Ahmed</td>
                         <td data-label="ID">20200407</td>
                     </tr>
                     <tr>
-                        <td data-label="Name">Abdelrahman Khaled Mohamed</td>
+                        <td data-label="Name">Abdelrahman Khaled</td>
                         <td data-label="ID">20190803</td>
                     </tr>
                     <tr>
-                        <td data-label="Name">Nour El-Deen Mahmoud Okbi</td>
+                        <td data-label="Name">Nour El-Deen Mahmoud</td>
                         <td data-label="ID">20200608</td>
                     </tr>
                     <tr>
@@ -174,7 +179,7 @@
                         <td data-label="ID">20200757</td>
                     </tr>
                     <tr>
-                        <td data-label="Name">Nagi Mohamed Nagi</td>
+                        <td data-label="Name">Nagi Mohamed</td>
                         <td data-label="ID">20200580</td>
                     </tr>
                 </tbody>
@@ -182,6 +187,5 @@
             <form action="index.html">
                 <button>Let's Begin</button>
             </form>
-            
     </body>
 </html>
