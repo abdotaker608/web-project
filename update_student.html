@@ -60,10 +60,10 @@
             text-align: left;
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr;
             gap: 16px;
             opacity: 0;
             animation: slide-up 700ms ease-out forwards;
+            grid-template-columns: 1fr;
         }
 
         input {
@@ -96,6 +96,10 @@
         .radio-input {
             display: flex;
             gap: 5px;
+        }
+
+        .form-button-container {
+            text-align: center;
         }
 
         form button {
@@ -140,6 +144,10 @@
                 width: fit-content;
                 padding: 16px 32px;
             }
+
+            .form-button-container {
+                grid-column-end: span 2;
+            }
         }
     </style>
 </head>
@@ -155,47 +163,46 @@
     </div>
     <div class="form-container">
         <form method="get" action="./students.html">
-            
             <div>
-                <label>ID</label>
-                <input type="text" maxlength="8" name="id" disabled value="2020XXXX" />
+                <label for="id">ID</label>
+                <input type="text" maxlength="8" name="id" id="id" disabled placeholder="2020XXXX"/>
             </div>
     
             <div>
-                <label>Name</label>
-                <input type="text" maxlength="30" name="name" />
+                <label for="name">Name</label>
+                <input type="text" maxlength="30" name="name" id="name"/>
             </div>
     
             <div>
-                <label>Email</label>
-                <input type="text" maxlength="30" name="email" />
+                <label for="email">Email</label>
+                <input type="text" maxlength="30" name="email" id="email"/>
             </div>
 
             <div>
-                <label>Date of birth</label>
-                <input type="date" name="date" />
+                <label for="date">Date of birth</label>
+                <input type="date" name="date" id="date"/>
             </div>
     
             <div>
-                <label>GPA</label>
-                <input type="text" maxlength="4" name="gpa" />
+                <label for="gpa">GPA</label>
+                <input type="text" maxlength="4" name="gpa" id="gpa"/>
             </div>
 
             <div>
-                <label>Mobile No.</label>
-                <input type="text" maxlength="11" name="Mobile number" />
+                <label for="mobile">Mobile No.</label>
+                <input type="text" maxlength="11" name="mobile" id="mobile"/>
             </div>
     
             <div class="radio-input">
                 <span>Gender: </span>
                 <div>
                     <div class="radio">
-                        <input type="radio" name="gender" value="male" />
-                        <label>Male</label>
+                        <input type="radio" name="gender" value="male" id="gender-male"/>
+                        <label for="gender-male">Male</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="gender" value="female" />
-                        <label>Female</label>
+                        <input type="radio" name="gender" value="female" id="gender-female"/>
+                        <label for="gender-female">Female</label>
                     </div>
                 </div>
             </div>
@@ -204,20 +211,20 @@
                 <span>Level: </span>
                 <div>
                     <div class="radio">
-                        <input type="radio" name="level" value="1" />
-                        <label>1</label>
+                        <input type="radio" name="level" value="1" id='level-1'/>
+                        <label for='level-1'>1</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="level" value="2" />
-                        <label>2</label>
+                        <input type="radio" name="level" value="2" id='level-2'/>
+                        <label for='level-2'>2</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="level" value="3" />
-                        <label>3</label>
+                        <input type="radio" name="level" value="3" id='level-3'/>
+                        <label for='level-3'>3</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="level" value="4" />
-                        <label>4</label>
+                        <input type="radio" name="level" value="4" id='level-4'/>
+                        <label for='level-4'>4</label>
                     </div>
                 </div>
             </div>
@@ -226,12 +233,12 @@
                 <span>Status: </span>
                 <div>
                     <div class="radio">
-                        <input type="radio" name="status" value="active" />
-                        <label>Active</label>
+                        <input type="radio" name="status" value="active" id="active"/>
+                        <label for="active">Active</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="status" value="inactive">
-                        <label>Inactive</label>
+                        <input type="radio" name="status" value="inactive" id="inactive">
+                        <label for="inactive">Inactive</label>
                     </div>
                 </div>
             </div>
@@ -240,29 +247,29 @@
                 <span>Department: </span>
                 <div>
                     <div class="radio">
-                        <input type="radio" name="department" value="AI" />
-                        <label>AI</label>
+                        <input type="radio" name="department" value="AI" id="ai" disabled/>
+                        <label for="ai">AI</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="department" value="CS" />
-                        <label>CS</label>
+                        <input type="radio" name="department" value="CS" id="cs" disabled/>
+                        <label for="cs">CS</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="department" value="IS" />
-                        <label>IS</label>
+                        <input type="radio" name="department" value="IS" id="is" disabled/>
+                        <label for="is">IS</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="department" value="IT" />
-                        <label>IT</label>
+                        <input type="radio" name="department" value="IT" id="it" disabled/>
+                        <label for="it">IT</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="department" value="DS" />
-                        <label>DS</label>
+                        <input type="radio" name="department" value="DS" id="ds" disabled/>
+                        <label for="ds">DS</label>
                     </div>
                 </div>
             </div>
     
-            <div style="text-align: center; grid-column-end: span 2;">
+            <div class="form-button-container">
                 <button type="submit">Add</button>
             </div>
         </form>

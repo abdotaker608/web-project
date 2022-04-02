@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departement selection</title>
+    <link rel="stylesheet" href="./styles/default.css" />
+    <link rel="shortcut icon" href="./assets/logo.jpg" />
+    <style>
+        @keyframes slide-up {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .nav-bar {
+            padding: 12px 0 56px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .navs{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav{
+            color: var(--dark);
+            text-decoration: none;
+            transition: 250ms ease-out;
+            font-weight: 500;
+        }
+
+        .nav:hover, .nav-active{
+            color: var(--primary);
+        }
+
+        .form-container {
+            padding: 5px var(--padding-inline-lg);
+        }
+
+        form{
+            border-radius: 5%;
+            text-align: left;
+            width: 100%;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            opacity: 0;
+            animation: slide-up 700ms ease-out forwards;
+        }
+
+        form button {
+            width: fit-content;
+            padding: 16px 32px;
+        }
+
+        form button {
+            width: 100%;
+            color: white;
+            border-radius: 5px;
+            background-color: var(--primary);
+            border: none;
+            outline: none;
+            padding: 12px;
+            font-weight: bold;
+            margin-top: 12px;
+            transition: 250ms ease-out;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: var(--light-primary);
+        }
+
+        select {
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        @media screen and (min-width: 768px) {
+            .nav-bar {
+                flex-direction: row;
+                gap: 32px;
+                padding: 24px var(--padding-inline-lg) 56px var(--padding-inline-lg);
+            }
+
+            .form-container {
+                padding: 5px var(--padding-inline-lg);
+            }
+
+            form {
+                width: 700px;
+                margin: 0 auto;
+                border-radius: 5px;
+                padding: 32px;
+                box-shadow: 0 0 5px silver;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            form button {
+                width: fit-content;
+                padding: 16px 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <img src="./assets/logo.jpg" alt="Logo" style="height: 80px;">
+        <div class="navs">
+            <div class="box"><a href="./index.html" class="nav">Home</a></div>
+            <div class="box"><a href="./students.html" class="nav">Students</a></div>
+            <div class="box"><a href="./new_student.html" class="nav">Register</a></div>
+            <div class="box"><a href="./update_student.html" class="nav">Update</a></div>
+        </div>
+    </div>
+    <div class="form-container">
+        <form method="post">
+            <h1>Choose your department now!</h1>
+            <p>If you're a year 3 student, you can choose one of the available departments according to your preferences.</p>
+            <p>Name: Student Name<br/> ID: 2020XXXX<br/></p>
+            <label for="Department">Departments:</label>
+            <select name="Department">
+                <option>Artificial intelligence</option>
+                <option>Information technology</option>
+                <option>Information systems</option>
+                <option>Computer science</option>
+            </select>
+            <button type="button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
