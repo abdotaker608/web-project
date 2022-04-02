@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Page</title>
+    <link rel="stylesheet" href="./styles/default.css" />
+    <link rel="shortcut icon" href="./assets/logo.jpg" />
+    <style>
+        @keyframes slide-up {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .nav-bar {
+            padding: 12px 0 56px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .navs{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav{
+            color: var(--dark);
+            text-decoration: none;
+            transition: 250ms ease-out;
+            font-weight: 500;
+        }
+
+        .nav:hover, .nav-active{
+            color: var(--primary);
+        }
+
+        .items {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 48px 24px 0 24px;
+            gap: 12px;
+            opacity: 0;
+            animation: appear 500ms ease-out forwards;
+            animation-delay: 900ms;
+        }
+
+        .item {
+            background-color: var(--primary);
+            color: white;
+            padding: 24px;
+            border-radius: 5px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .nav-bar {
+                flex-direction: row;
+                gap: 32px;
+                padding: 24px var(--padding-inline-lg) 56px var(--padding-inline-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <img src="./assets/logo.jpg" alt="Logo" style="height: 80px;">
+        <div class="navs">
+            <div class="box"><a href="./index.html" class="nav">Home</a></div>
+            <div class="box"><a href="./students.html" class="nav">Students</a></div>
+            <div class="box"><a href="./new_student.html" class="nav">Register</a></div>
+            <div class="box"><a href="./update_student.html" class="nav">Update</a></div>
+            <div class="box"><a href="./department.html" class="nav">Departement</a></div>
+            <div class="box"><a href="./Help_Us.html" class="nav nav-active">Help Us</a></div>
+        </div>
+    </div>
+<div class="items">
+    <div class="item">
+        <h1>Student Table</h1>
+        <p>This Page helps you to show students and Their information like(ID,Name,Birth Date,GPA,Gender,Level,Status,Department,Email and Mobile Number)</p>
+    </div>
+
+
+    <div class="item">
+        <h1>Register Courses</h1>
+        <p>This Page helps you to regist The courses</p>
+        <p>Enter Your Name, ID, Email, Date of Birth, GPA and Mpbil Number</p>
+        <p>Choose your Gender</p>
+        <p>Choose your Level</p>
+        <p>Choose your Status</p>
+        <p>Choose your Department</p>
+        <p>Then Click add to regist The Cousre</p>
+    </div>
+
+    <div class="item">
+        <h1>Update your information</h1>
+        <p>If you Enter a wrong information This Page Helps you to update yor information</p>
+        <p>It shows his ID</p>
+        <p>Enter your new Name, Email, Date of Birth, GPA and Mobil Number</p>
+        <p>Choose your Gender</p>
+        <p>Choose your Level</p>
+        <p>Choose your Status</p>
+        <p>Choose your Department</p>
+        <p>Then Click add to Modify</p>
+    </div>
+
+    <div class="item">
+        <h1>Update your information</h1>
+        <p>If you Enter a wrong information This Page Helps you to update yor information</p>
+        <p>It shows his ID</p>
+        <p>Enter your new Name, Email, Date of Birth, GPA and Mobil Number</p>
+        <p>Choose your Gender</p>
+        <p>Choose your Level</p>
+        <p>Choose your Status</p>
+        <p>Choose your Department</p>
+        <p>Then Click add to Modify</p>
+    </div>
+
+    <div class="item">
+        <h1>Select Your Department</h1>
+        <p>If you're a year 3 student, you can choose one of the available departments according to your preferences.</p>
+        <p>Choose your Department</p>
+        <p>Then click Submit</p>
+    </div>
+</div>
+    
+</body>
+</html>
