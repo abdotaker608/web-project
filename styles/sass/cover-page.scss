@@ -1,0 +1,39 @@
+@import "./keyframes";
+@import "./mixins";
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--padding-inline);
+}
+
+header h1 {
+    max-width: 600px;
+    opacity: 0;
+    animation: slide-up 500ms ease-out forwards;
+}
+
+.logo {
+    opacity: 0;
+    animation: appear 500ms ease-out forwards;
+    animation-delay: 700ms;
+}
+
+.students-table {
+    margin-top: 40px;
+}
+
+form {
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 20px;
+
+    button {
+        width: 100%;
+        margin-top: 12px;
+
+        @include primary-btn;
+    }
+}

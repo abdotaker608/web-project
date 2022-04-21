@@ -1,0 +1,43 @@
+@mixin min-width($px) {
+    @media screen and (min-width: #{$px}px) {
+        @content;
+    }
+}
+
+@mixin max-width($px) {
+    @media screen and (max-width: #{$px}px) {
+        @content;
+    }
+}
+
+@mixin primary-btn {
+    color: white;
+    border-radius: 5px;
+    background-color: var(--primary);
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-weight: bold;
+    transition: 250ms ease-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--light-primary);
+    }
+
+    @include min-width(768) {
+        width: fit-content;
+        padding: 16px 32px;
+    }
+}
+
+@mixin primary-item {
+    background-color: var(--primary);
+    color: white;
+    padding: 24px;
+    border-radius: 5px;
+
+    * {
+        color: white;
+    }
+}

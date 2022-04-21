@@ -1,281 +1,219 @@
 <!DOCTYPE html>
 <!-- saved from url=(0076)file:///E:/FCAI/2nd%20grade/4th%20semester/Web/Lab1/add%20new%20student.html -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/default.css" />
-    <link rel="shortcut icon" href="./assets/logo.jpg" />
-    <title>Register</title>
-    <style>
-        @keyframes slide-up {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .nav-bar {
-            padding: 12px 0 56px 0;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .navs{
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .nav{
-            color: var(--dark);
-            text-decoration: none;
-            transition: 250ms ease-out;
-            font-weight: 500;
-        }
-
-        .nav:hover, .nav-active{
-            color: var(--primary);
-        }
-
-        .center{
-            text-align: center;
-            margin: auto;
-        }
-
-        .form-container {
-            padding: 5px var(--padding-inline);
-            overflow-y: hidden;
-        }
-
-        form{
-            border-radius: 5%;
-            text-align: left;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-            opacity: 0;
-            animation: slide-up 700ms ease-out forwards;
-        }
-
-        input {
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid lightgray;
-            outline: none;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        input[type='radio'] {
-            width: initial;
-        }
-
-        label {
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .radio {
-            display: inline-flex;
-        }
-
-        .radio:not(:last-child) {
-            margin-right: 5px;
-        }
-
-        .radio-input {
-            display: flex;
-            gap: 5px;
-        }
-
-        .form-button-container {
-            text-align: center;
-        }
-
-        form button {
-            width: 100%;
-            color: white;
-            border-radius: 5px;
-            background-color: var(--primary);
-            border: none;
-            outline: none;
-            padding: 12px;
-            font-weight: bold;
-            margin-top: 12px;
-            transition: 250ms ease-out;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: var(--light-primary);
-        }
-
-        @media screen and (min-width: 768px) {
-            .nav-bar {
-                flex-direction: row;
-                gap: 32px;
-                padding: 24px var(--padding-inline-lg) 56px var(--padding-inline-lg);
-            }
-
-            .form-container {
-                padding: 5px var(--padding-inline-lg);
-            }
-
-            form {
-                width: 700px;
-                margin: 0 auto;
-                border-radius: 5px;
-                padding: 32px;
-                box-shadow: 0 0 5px silver;
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            form button {
-                width: fit-content;
-                padding: 16px 32px;
-            }
-
-            .form-button-container {
-                grid-column-end: span 2;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="nav-bar">
-        <img src="./assets/logo.jpg" alt="Logo" style="height: 80px;">
-        <div class="navs">
-            <div class="box"><a href="/" class="nav">Home</a></div>
-            <div class="box"><a href="./students.html" class="nav">Students</a></div>
-            <div class="box"><a href="./new_student.html" class="nav nav-active">Register</a></div>
-            <div class="box"><a href="./help_us.html" class="nav">Support</a></div>
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/logo.jpg" />
+        <title>Register</title>
+        <link rel="stylesheet" href="./styles/css/default.css" />
+        <link rel="stylesheet" href="./styles/css/new-student.css" />
+    </head>
+    <body>
+        <div class="nav-bar">
+            <img src="./assets/logo.jpg" alt="Logo" style="height: 80px" />
+            <div class="navs">
+                <div class="box"><a href="/" class="nav">Home</a></div>
+                <div class="box">
+                    <a href="./students.html" class="nav">Students</a>
+                </div>
+                <div class="box">
+                    <a href="./new_student.html" class="nav nav-active"
+                        >Register</a
+                    >
+                </div>
+                <div class="box">
+                    <a href="./help_us.html" class="nav">Support</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="form-container">
-        <form method="get" action="./students.html">
-            
-            <div>
-                <label for="id">ID</label>
-                <input type="text" maxlength="8" name="id" id="id" />
-            </div>
-    
-            <div>
-                <label for="name">Name</label>
-                <input type="text" maxlength="30" name="name" id="name"/>
-            </div>
-    
-            <div>
-                <label for="email">Email</label>
-                <input type="text" maxlength="30" name="email" id="email"/>
-            </div>
-
-            <div>
-                <label for="date">Date of birth</label>
-                <input type="date" name="date" id="date"/>
-            </div>
-    
-            <div>
-                <label for="gpa">GPA</label>
-                <input type="text" maxlength="4" name="gpa" id="gpa"/>
-            </div>
-
-            <div>
-                <label for="mobile">Mobile No.</label>
-                <input type="text" maxlength="11" name="mobile" id="mobile"/>
-            </div>
-    
-            <div class="radio-input">
-                <span>Gender: </span>
+        <div class="form-container">
+            <p class="error-message"></p>
+            <form id="new-student-form">
                 <div>
-                    <div class="radio">
-                        <input type="radio" name="gender" value="male" id="gender-male"/>
-                        <label for="gender-male">Male</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="gender" value="female" id="gender-female"/>
-                        <label for="gender-female">Female</label>
+                    <label for="id">ID</label>
+                    <input type="text" maxlength="8" name="id" id="id" />
+                </div>
+
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" maxlength="30" name="name" id="name" />
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" maxlength="30" name="email" id="email" />
+                </div>
+
+                <div>
+                    <label for="date">Date of birth</label>
+                    <input type="date" name="date" id="date" />
+                </div>
+
+                <div>
+                    <label for="gpa">GPA</label>
+                    <input type="text" maxlength="4" name="gpa" id="gpa" />
+                </div>
+
+                <div>
+                    <label for="mobile">Mobile No.</label>
+                    <input
+                        type="text"
+                        maxlength="11"
+                        name="mobile"
+                        id="mobile"
+                    />
+                </div>
+
+                <div class="radio-input">
+                    <span>Gender: </span>
+                    <div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="male"
+                                id="gender-male"
+                            />
+                            <label for="gender-male">Male</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="female"
+                                id="gender-female"
+                            />
+                            <label for="gender-female">Female</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="radio-input">
-                <span>Level: </span>
-                <div>
-                    <div class="radio">
-                        <input type="radio" name="level" value="1" id='level-1'/>
-                        <label for='level-1'>1</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="level" value="2" id='level-2'/>
-                        <label for='level-2'>2</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="level" value="3" id='level-3'/>
-                        <label for='level-3'>3</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="level" value="4" id='level-4'/>
-                        <label for='level-4'>4</label>
-                    </div>
-                </div>
-            </div>
 
-            <div class="radio-input">
-                <span>Status: </span>
-                <div>
-                    <div class="radio">
-                        <input type="radio" name="status" value="active" id="active"/>
-                        <label for="active">Active</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="status" value="inactive" id="inactive">
-                        <label for="inactive">Inactive</label>
+                <div class="radio-input">
+                    <span>Level: </span>
+                    <div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="level"
+                                value="1"
+                                id="level-1"
+                            />
+                            <label for="level-1">1</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="level"
+                                value="2"
+                                id="level-2"
+                            />
+                            <label for="level-2">2</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="level"
+                                value="3"
+                                id="level-3"
+                            />
+                            <label for="level-3">3</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="level"
+                                value="4"
+                                id="level-4"
+                            />
+                            <label for="level-4">4</label>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="radio-input">
-                <span>Department: </span>
-                <div>
-                    <div class="radio">
-                        <input type="radio" name="department" value="AI" id="ai"/>
-                        <label for="ai">AI</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="department" value="CS" id="cs"/>
-                        <label for="cs">CS</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="department" value="IS" id="is"/>
-                        <label for="is">IS</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="department" value="IT" id="it"/>
-                        <label for="it">IT</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="department" value="DS" id="ds"/>
-                        <label for="ds">DS</label>
+                <div class="radio-input">
+                    <span>Status: </span>
+                    <div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="status"
+                                value="active"
+                                id="active"
+                            />
+                            <label for="active">Active</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="status"
+                                value="inactive"
+                                id="inactive"
+                            />
+                            <label for="inactive">Inactive</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
-            <div class="form-button-container">
-                <button type="submit">Add</button>
-            </div>
-        </form>
-    </div>
-</body>
-    
-   </html>
+
+                <div class="radio-input">
+                    <span>Department: </span>
+                    <div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="AI"
+                                id="ai"
+                            />
+                            <label for="ai">AI</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="CS"
+                                id="cs"
+                            />
+                            <label for="cs">CS</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="IS"
+                                id="is"
+                            />
+                            <label for="is">IS</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="IT"
+                                id="it"
+                            />
+                            <label for="it">IT</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="DS"
+                                id="ds"
+                            />
+                            <label for="ds">DS</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-button-container">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="./js/validations.js"></script>
+        <script src="./js/new-student.js"></script>
+    </body>
+</html>

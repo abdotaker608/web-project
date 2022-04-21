@@ -1,0 +1,56 @@
+@import "./keyframes";
+@import "./mixins";
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--padding-inline);
+
+    h1 {
+        max-width: 600px;
+        opacity: 0;
+        animation: slide-up 500ms ease-out forwards;
+    }
+
+    h2 {
+        color: silver;
+        font-size: 20px;
+        opacity: 0;
+        animation: slide-up 500ms ease-out forwards;
+        animation-delay: 300ms;
+    }
+
+    @include min-width(992) {
+        flex-direction: row-reverse;
+        text-align: start;
+        justify-content: space-between;
+        padding: 0 var(--padding-inline-lg);
+    }
+}
+
+.logo {
+    opacity: 0;
+    animation: appear 500ms ease-out forwards;
+    animation-delay: 700ms;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 48px 24px 0 24px;
+    gap: 12px;
+    opacity: 0;
+    animation: appear 500ms ease-out forwards;
+    animation-delay: 900ms;
+
+    .item {
+        @include primary-item;
+    }
+
+    @include min-width(992) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 48px var(--padding-inline-lg);
+    }
+}

@@ -1,0 +1,52 @@
+@import "./keyframes";
+@import "./mixins";
+
+select {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-container {
+    padding: 5px var(--padding-inline-lg);
+    overflow-y: hidden;
+
+    @include min-width(768) {
+        margin: 0 auto;
+        width: fit-content;
+    }
+}
+
+form {
+    border-radius: 5%;
+    text-align: left;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    opacity: 0;
+    animation: slide-up 700ms ease-out forwards;
+
+    button {
+        margin-top: 25px;
+
+        @include primary-btn;
+    }
+
+    @include min-width(768) {
+        width: 700px;
+        border-radius: 5px;
+        padding: 32px;
+        box-shadow: 0 0 5px silver;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
