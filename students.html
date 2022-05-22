@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./assets/logo.jpg" />
         <title>Students</title>
-        <link rel="stylesheet" href="./styles/css/default.css" />
-        <link rel="stylesheet" href="./styles/css/students.css" />
+        <link rel="stylesheet" href="./styles/default.css" />
+        <link rel="stylesheet" href="./styles/students.css" />
     </head>
     <body>
         <div class="nav-bar">
             <img src="./assets/logo.jpg" alt="Logo" style="height: 80px" />
             <div class="navs">
-                <div class="box"><a href="/" class="nav">Home</a></div>
+                <div class="box"><a href="./index.html" class="nav">Home</a></div>
                 <div class="box">
                     <a href="./students.html" class="nav nav-active"
                         >Students</a
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="students-table-container">
-            <table class="students-table">
+            <table class="students-table" id="table">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -131,5 +131,7 @@
                 </tbody>
             </table>
         </div>
+
+        <script src="./js/list.js"></script>
     </body>
 </html>
