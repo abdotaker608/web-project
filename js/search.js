@@ -43,8 +43,7 @@ const handleNewStudentFormSubmit = (e) => {
         };
         xhtml.open('GET','https://web-project-api.herokuapp.com/students/',true);
         xhtml.send();
-    };
-
+  }; 
 
 //Attach handler to form
 form.addEventListener("submit", handleNewStudentFormSubmit);

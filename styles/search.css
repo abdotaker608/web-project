@@ -1,0 +1,239 @@
+@-webkit-keyframes slide-up {
+    from {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .center {
+    text-align: center;
+    margin: auto;
+  }
+  
+  .form-container {
+    padding: 5px var(--padding-inline);
+    overflow-y: hidden;
+  }
+  
+  .form-container .error-message {
+    color: var(--danger);
+  }
+  
+  @media screen and (min-width: 768px) {
+    .form-container {
+      padding: 5px var(--padding-inline-lg);
+      margin: 0 auto;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+  }
+  
+  
+  form {
+    border-radius: 5%;
+    text-align: left;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 16px;
+    opacity: 0;
+    -webkit-animation: slide-up 700ms ease-out forwards;
+            animation: slide-up 700ms ease-out forwards;
+  }
+  
+  form button {
+    width: 100%;
+    margin-top: 12px;
+    color: white;
+    border-radius: 5px;
+    background-color: var(--primary);
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-weight: bold;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+    cursor: pointer;
+  }
+  
+  .students-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: appear 500ms ease-out forwards;
+            animation: appear 500ms ease-out forwards;
+  }
+  
+  .students-table thead {
+    background: var(--primary);
+    color: white;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .students-table thead {
+      display: none;
+    }
+  }
+  
+  .students-table th,
+  .students-table td {
+    padding: 10px 20px;
+  }
+  
+  .students-table td {
+    color: #363535;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .students-table td::before {
+      content: attr(data-label) ":";
+      display: inline-block;
+      width: 120px;
+      font-weight: bold;
+    }
+  }
+  
+  .students-table tr:nth-child(even) {
+    background: var(--light-gray);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .students-table tbody tr {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      background: unset !important;
+      border-bottom: 1px solid #f0eeee;
+      padding: 10px 0;
+    }
+  }
+  
+  .students-table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .students-table {
+      -webkit-box-pack: stretch;
+          -ms-flex-pack: stretch;
+              justify-content: stretch;
+      text-align: start;
+    }
+  }
+
+  form button:hover {
+    background-color: var(--light-primary);
+  }
+  
+  @media screen and (min-width: 768px) {
+    form button {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      padding: 16px 32px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    form button {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+  }
+  
+  form input {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  form input[type="radio"] {
+    width: initial;
+  }
+  
+  form label {
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  form .radio {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  
+  form .radio:not(:last-child) {
+    margin-right: 5px;
+  }
+  
+  form .radio-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    form {
+      width: 700px;
+      border-radius: 5px;
+      padding: 32px;
+      -webkit-box-shadow: 0 0 5px silver;
+              box-shadow: 0 0 5px silver;
+      -ms-grid-columns: 1fr;
+          grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
