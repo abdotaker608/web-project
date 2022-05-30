@@ -24,6 +24,18 @@ let data = {
     gender: "",
 };
 
+document.getElementById("button").onclick=function(){
+    var xhtml= new XMLHttpRequest();
+    xhtml.open("DELETE","https://web-project-api.herokuapp.com/students/"+idInput.value,true);
+    xhtml.setRequestHeader('Content-Type', 'application/json');
+    xhtml.onreadystatechange =function() {
+    if(this.readyState==4 && this.status==204){
+        alert("Deleted data");
+    }
+    };
+    xhtml.send();
+}
+
 //Form submit handler
 const handleNewStudentFormSubmit = (e) => {
     //stop redirection
@@ -48,8 +60,7 @@ const handleNewStudentFormSubmit = (e) => {
         validMobile &&
         validGpa &&
         validLevel &&
-        validStatus &&
-        validDepartment;
+        validStatus;
     //error message to display
     let errMess;
     //if everything is valid submit data to backend
@@ -58,7 +69,16 @@ const handleNewStudentFormSubmit = (e) => {
         errorMessage.textContent = "";
 
         /* AJAX Request */
+    var xhtml= new XMLHttpRequest();
+    xhtml.open("PUT","https://web-project-api.herokuapp.com/students/"+idInput.value,true);
+    xhtml.setRequestHeader('Content-Type', 'application/json');
+    xhtml.onreadystatechange =function() {
+    if(this.readyState==4 && this.status==200){
+        alert("added data");
     }
+    };
+    xhtml.send(JSON.stringify({...data,name:nameInput.value,email:emailInput.value,birth:dateInput.value,gpa:gpaInput.value,mobile_number:mobileInput.value}));
+}
     //otherwise, we show the error message
     else {
         //check each validation separately

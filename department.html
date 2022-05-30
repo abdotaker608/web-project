@@ -6,16 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./assets/logo.jpg" />
         <title>Departement selection</title>
-        <link rel="stylesheet" href="./styles/css/default.css" />
-        <link rel="stylesheet" href="./styles/css/department.css" />
+        <link rel="stylesheet" href="./styles/default.css" />
+        <link rel="stylesheet" href="./styles/department.css" />
     </head>
     <body>
         <div class="nav-bar">
             <img src="./assets/logo.jpg" alt="Logo" style="height: 80px" />
             <div class="navs">
-                <div class="box">
-                    <a href="./index.html" class="nav">Home</a>
-                </div>
+                <div class="box"><a href="./index.html" class="nav">Home</a></div>
                 <div class="box">
                     <a href="./students.html" class="nav">Students</a>
                 </div>
@@ -23,30 +21,89 @@
                     <a href="./new_student.html" class="nav">Register</a>
                 </div>
                 <div class="box">
+                    <a href="./search.html" class="nav">Search</a>
+                </div>
+                <div class="box">
                     <a href="./help_us.html" class="nav">Support</a>
                 </div>
             </div>
         </div>
         <div class="form-container">
-            <form method="post">
+            <p class="error-message"></p>
+            <form method="post" id="department-form">
                 <h1>Choose your department now!</h1>
                 <p>
                     If you're a year 3 student, you can choose one of the
                     available departments according to your preferences.
                 </p>
+                <div>
+                    <label for="id">ID</label>
+                    <input
+                        type="text"
+                        maxlength="8"
+                        name="id"
+                        id="id"
+                    />
+                </div>
                 <p>
-                    Name: Student Name<br />
-                    ID: 2020XXXX<br />
+                    Name: 
                 </p>
-                <label for="Department">Departments:</label>
-                <select name="Department">
-                    <option>Artificial intelligence</option>
-                    <option>Information technology</option>
-                    <option>Information systems</option>
-                    <option>Computer science</option>
-                </select>
-                <button type="button">Submit</button>
+                <p id="name"></p>
+                <div class="radio-input">
+                    <span>Department: </span>
+                    <div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="AI"
+                                id="ai"
+                            />
+                            <label for="ai">AI</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="CS"
+                                id="cs"
+                            />
+                            <label for="cs">CS</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="IS"
+                                id="is"
+                            />
+                            <label for="is">IS</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="IT"
+                                id="it"
+                            />
+                            <label for="it">IT</label>
+                        </div>
+                        <div class="radio">
+                            <input
+                                type="radio"
+                                name="department"
+                                value="DS"
+                                id="ds"
+                            />
+                            <label for="ds">DS</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
             </form>
         </div>
+
+        <script src="./js/validations.js"></script>
+        <script src="./js/department.js"></script>
     </body>
 </html>

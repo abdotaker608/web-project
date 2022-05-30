@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+<!-- saved from url=(0076)file:///E:/FCAI/2nd%20grade/4th%20semester/Web/Lab1/add%20new%20student.html -->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./assets/logo.jpg" />
-        <title>Students</title>
+        <title>Register</title>
         <link rel="stylesheet" href="./styles/default.css" />
-        <link rel="stylesheet" href="./styles/students.css" />
+        <link rel="stylesheet" href="./styles/search.css" />
     </head>
     <body>
         <div class="nav-bar">
@@ -15,25 +16,38 @@
             <div class="navs">
                 <div class="box"><a href="./index.html" class="nav">Home</a></div>
                 <div class="box">
-                    <a href="./students.html" class="nav nav-active">Students</a>
+                    <a href="./students.html" class="nav">Students</a>
                 </div>
                 <div class="box">
                     <a href="./new_student.html" class="nav">Register</a>
                 </div>
                 <div class="box">
-                    <a href="./search.html" class="nav">Search</a>
+                    <a href="./search.html" class="nav nav-active">Search</a>
                 </div>
                 <div class="box">
                     <a href="./help_us.html" class="nav">Support</a>
                 </div>
             </div>
         </div>
+        <div class="form-container">
+            <form id="search-form">
+                <div>
+                    <input type="text" name="name" id="name" placeholder="search..."/>
+                </div>
+                <div class="form-button-container">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
         <div class="students-table-container">
             <table class="students-table" id="table">
                 
             </table>
         </div>
 
-        <script src="./js/list.js"></script>
+
+        <script src="./js/validations.js"></script>
+        <script src="./js/search.js"></script>
     </body>
 </html>

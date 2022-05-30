@@ -103,6 +103,43 @@ form button:hover {
   background-color: var(--light-primary);
 }
 
+form input {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  outline: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+form input[type="radio"] {
+  width: initial;
+}
+
+form label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+form .radio {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+form .radio:not(:last-child) {
+  margin-right: 5px;
+}
+
+form .radio-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
 @media screen and (min-width: 768px) {
   form button {
     width: -webkit-fit-content;
@@ -119,7 +156,7 @@ form button:hover {
     padding: 32px;
     -webkit-box-shadow: 0 0 5px silver;
             box-shadow: 0 0 5px silver;
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: 1fr;
         grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -6,20 +6,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./assets/logo.jpg" />
-        <title>Register</title>
-        <link rel="stylesheet" href="./styles/css/default.css" />
-        <link rel="stylesheet" href="./styles/css/new-student.css" />
+        <title>Update Page</title>
+        <link rel="stylesheet" href="./styles/default.css" />
+        <link rel="stylesheet" href="./styles/new-student.css" />
     </head>
     <body>
         <div class="nav-bar">
             <img src="./assets/logo.jpg" alt="Logo" style="height: 80px" />
             <div class="navs">
-                <div class="box"><a href="/" class="nav">Home</a></div>
+                <div class="box"><a href="./index.html" class="nav">Home</a></div>
                 <div class="box">
                     <a href="./students.html" class="nav">Students</a>
                 </div>
                 <div class="box">
                     <a href="./new_student.html" class="nav">Register</a>
+                </div>
+                <div class="box">
+                    <a href="./search.html" class="nav">Search</a>
                 </div>
                 <div class="box">
                     <a href="./help_us.html" class="nav">Support</a>
@@ -28,6 +31,7 @@
         </div>
         <div class="form-container">
             <p class="error-message"></p>
+            <p>If you want to delete enter id only</p>
             <form id="update-student-form">
                 <div>
                     <label for="id">ID</label>
@@ -36,8 +40,6 @@
                         maxlength="8"
                         name="id"
                         id="id"
-                        disabled
-                        value="2020XXXX"
                     />
                 </div>
 
@@ -58,7 +60,7 @@
 
                 <div>
                     <label for="gpa">GPA</label>
-                    <input type="text" maxlength="4" name="gpa" id="gpa" />
+                    <input type="number" maxlength="4" name="gpa" id="gpa" />
                 </div>
 
                 <div>
@@ -78,7 +80,7 @@
                             <input
                                 type="radio"
                                 name="gender"
-                                value="male"
+                                value="m"
                                 id="gender-male"
                             />
                             <label for="gender-male">Male</label>
@@ -87,7 +89,7 @@
                             <input
                                 type="radio"
                                 name="gender"
-                                value="female"
+                                value="f"
                                 id="gender-female"
                             />
                             <label for="gender-female">Female</label>
@@ -218,7 +220,10 @@
                 </div>
 
                 <div class="form-button-container">
-                    <button type="submit">Add</button>
+                    <button type="submit">Update</button>
+                </div>
+                <div class="form-button-container">
+                    <button type="submit" id="button">Delete</button>
                 </div>
             </form>
         </div>
